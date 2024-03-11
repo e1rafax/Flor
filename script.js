@@ -1,16 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById('mensaje').style.display = 'block';
   createPetals();
+  setTimeout(function() {
+    document.getElementById('mensaje').style.opacity = '1';
+  }, 5000); // Show message after 5 seconds
 });
+
 function createPetals() {
-  const petalsContainer = document.getElementById('petals');
-  for (let i = 0; i < 12; i++) {
+  const petalContainer = document.getElementById('petal-container');
+  for (let i = 0; i < 10; i++) {
     const petal = document.createElement('div');
     petal.classList.add('petal');
-    petal.style.transform = `rotate(${i * 30}deg)`;
-    petalsContainer.appendChild(petal);
+    petal.style.left = `${i * 10}px`;
+    petalContainer.appendChild(petal);
   }
 }
+
 
 
 
