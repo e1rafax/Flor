@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perdon Cristin</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girasol con mensaje</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    #girasol {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #FFD700 30%, #FF4500 70%);
+      border-radius: 50%;
+      position: absolute;
+      transition: all 2s ease;
+    }
+
+    #mensaje {
+      position: absolute;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+  </style>
 </head>
 <body>
-    <div id="container">
-        <div id="frog"></div>
-        <div id="sunflower"></div>
-        <div id="message">Perdón Cristín</div>
-    </div>
+  <div id="container">
+    <div id="girasol"></div>
+    <div id="mensaje">Perdón Cristian</div>
+  </div>
 
-    <script src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var girasol = document.getElementById('girasol');
+      var mensaje = document.getElementById('mensaje');
+
+      // Animación de crecimiento del girasol
+      setTimeout(function() {
+        girasol.style.width = '300px';
+        girasol.style.height = '300px';
+      }, 500);
+
+      // Mostrar mensaje después de la animación del girasol
+      setTimeout(function() {
+        mensaje.style.opacity = '1';
+      }, 2500);
+    });
+  </script>
 </body>
 </html>
+
