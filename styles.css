@@ -18,6 +18,8 @@ body, html {
 
 #girasol {
   position: relative;
+  width: 150px;
+  height: 250px;
 }
 
 #tallo {
