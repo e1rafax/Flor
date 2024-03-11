@@ -1,46 +1,100 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-#container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-#frog {
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #87CEEB, #B0E0E6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #sunflower {
-    width: 200px;
-    height: 200px;
-    background-image: url('sunflower.png');
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.1);
-    display: none;
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
 
-#message {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    display: none;
+.center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.stem {
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  background-color: #228B22;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flower {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.center {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  bottom: 80px;
+  left: 80px;
+}
+
+.petal {
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background-color: #FFD700;
+  border-radius: 50%;
+}
+
+.petal:nth-child(1) {
+  transform: rotate(30deg);
+}
+
+.petal:nth-child(2) {
+  transform: rotate(60deg);
+}
+
+.petal:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.petal:nth-child(4) {
+  transform: rotate(120deg);
+}
+
+.petal:nth-child(5) {
+  transform: rotate(150deg);
+}
+
+.petal::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 25px 0;
+  border-color: #FFD700 transparent transparent;
+  border-radius: 50%;
+  bottom: 100px;
+  left: 70px;
 }
