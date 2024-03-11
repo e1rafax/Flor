@@ -1,16 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var frog = document.getElementById('frog');
-    var sunflower = document.getElementById('sunflower');
-    var message = document.getElementById('message');
+// script.js
 
-    frog.style.display = 'block';
-    sunflower.style.display = 'block';
+const sunflower = document.getElementById("sunflower");
+const stem = document.createElement("div");
+const petal = document.createElement("div");
+const center = document.createElement("div");
+const message = document.getElementById("message");
 
-    setTimeout(function() {
-        sunflower.style.transform = 'translate(-50%, -50%) scale(1)';
-        setTimeout(function() {
-            message.style.display = 'block';
-            message.style.opacity = '1';
-        }, 2000); // 2 segundos después de que el girasol se abra completamente
-    }, 2000); // 2 segundos después de que la página se cargue
-});
+stem.classList.add("stem");
+petal.classList.
