@@ -1,91 +1,65 @@
-/* styles.css */
-
-body {
-  background-color: #bde0c8;
-  background-image: url("https://i.imgur.com/Wp6TaZW.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+body, html {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-#sunflower {
-  background-color: #f0a30a;
-  border-radius: 50%;
-  height: 200px;
+#mensaje {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 200px;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
 }
 
-#sunflower:before {
-  background-color: #f0a30a;
+#girasol-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87CEEB; /* Light blue sky */
+}
+
+#girasol {
+  width: 80px;
+  height: 80px;
+  background-color: black; /* Black center */
   border-radius: 50%;
-  content: "";
-  height: 100px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 100px;
-}
-
-#sunflower:after {
-  background-color: #f0a30a;
-  border-radius: 50%;
-  content: "";
-  height: 50px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 50px;
-}
-
-.stem {
-  background-color: #4d5a33;
-  height: 200px;
-  left: 50%;
-  position: absolute;
-  top: 100%;
-  transform: translateX(-50%) rotate(-45deg) scale(0);
-  width: 20px;
+  position: relative;
+  animation: grow 3s ease-in-out forwards;
 }
 
 .petal {
-  background-color: #f0a30a;
-  border-radius: 50%;
-  height: 100px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg) scale(0);
-  width: 100px;
-}
-
-.center {
-  background-color: #000;
-  border-radius: 50%;
+  width: 10px;
   height: 50px;
-  left: 50%;
+  background-color: #FFD700; /* Yellow petals */
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom center;
 }
 
-#message {
-  color: #fff;
-  font-size: 36px;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
+.petal:nth-child(odd) {
+  transform: rotate(30deg);
+}
+
+.petal:nth-child(even) {
+  transform: rotate(60deg);
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
 }
