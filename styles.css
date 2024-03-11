@@ -22,16 +22,6 @@ body, html {
   height: 250px;
 }
 
-#tallo {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 150px;
-  background: #228B22; /* Green */
-}
-
 #centro {
   position: absolute;
   top: 50%;
@@ -45,20 +35,20 @@ body, html {
 
 #petal-container {
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .petal {
   width: 60px;
-  height: 100px;
+  height: 120px;
   background: #FFD700; /* Yellow */
   position: absolute;
   bottom: 0;
   left: 0;
   transform-origin: 50% 100%;
-  animation: petal-fall 4s infinite ease-in-out alternate;
+  border-radius: 50%;
 }
 
 .petal:nth-child(odd) {
@@ -89,3 +79,4 @@ body, html {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
